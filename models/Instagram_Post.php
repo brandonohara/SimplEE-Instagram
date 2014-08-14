@@ -43,10 +43,13 @@
 			
 			if($this->type == "image"){
 				$this->image = $json->images->standard_resolution->url;
-				$this->thumbnail = $json->images->thumbnail->url;
 			} else if($this->type == "video"){
 				$this->video = $json->videos->standard_resolution->url;
 			}
+
+			$this->thumbnail = $json->images->thumbnail->url;
+			$this->low_resolution = $json->images->low_resolution->url;
+			
 			$this->filter =  $json->filter;
 			
 			$this->likes = $json->likes->count;
