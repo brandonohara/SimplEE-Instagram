@@ -15,9 +15,8 @@
 		public $longitude;
 		
 		public $filter;
-		public $image;
+		public $url;
 		public $thumbnail;
-		public $video;
 		
 		public $likes = 0;
 		public $comment_count = 0;
@@ -42,11 +41,14 @@
 			}
 			
 			if($this->type == "image"){
-				$this->image = $json->images->standard_resolution->url;
-				$this->thumbnail = $json->images->thumbnail->url;
+				$this->url = $json->images->standard_resolution->url;
 			} else if($this->type == "video"){
-				$this->video = $json->videos->standard_resolution->url;
+				$this->url = $json->videos->standard_resolution->url;
 			}
+
+			$this->thumbnail = $json->images->thumbnail->url;
+			$this->low_resolution = $json->images->low_resolution->url;
+
 			$this->filter =  $json->filter;
 			
 			$this->likes = $json->likes->count;
