@@ -2,7 +2,7 @@
 	
 	require_once(PATH_THIRD."simplee_instagram/config.php");
 
-	class SimpleeInstagram {
+	class Simplee_instagram {
 		public $get = array();
 		public $client_id = null;
 		
