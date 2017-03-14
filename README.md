@@ -1,3 +1,5 @@
+### With Instagrams new API changes, this plugin will no longer work.
+
 ##### Table of Contents  
 * [Overview & Installation](#overview)  
 * Tags
